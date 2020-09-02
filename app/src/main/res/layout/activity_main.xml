@@ -9,10 +9,137 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/title"
+        android:id="@+id/title"
+        android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/first_column_title"
+        android:text="@string/first_column"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/first_column_first_q"
+        android:text="@string/true_char"
+        app:layout_constraintEnd_toStartOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/first_column_title" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/first_column_second_q"
+        android:text="@string/true_char"
+        app:layout_constraintEnd_toStartOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/first_column_first_q" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/first_column_third_q"
+        android:text="@string/false_char"
+        app:layout_constraintEnd_toStartOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/first_column_second_q" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/first_column_fourth_q"
+        android:text="@string/false_char"
+        app:layout_constraintEnd_toStartOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/first_column_third_q" />
+
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/second_column_title"
+        android:text="@string/second_column"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/second_column_first_p"
+        android:text="@string/true_char"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_column_title" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/second_column_second_p"
+        android:text="@string/false_char"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_column_first_p" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/second_column_third_p"
+        android:text="@string/true_char"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_column_second_p" />
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/second_column_fourth_p"
+        android:text="@string/false_char"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_column_third_p" />
+
+    <TextView
+        style="@style/ItemsStyle"
+        android:id="@+id/third_column_title"
+        android:text="@string/third_column"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <EditText
+        style="@style/ItemsStyle"
+        android:id="@+id/first_question"
+        android:ems="10"
+        app:layout_constraintStart_toEndOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/third_column_title"
+        android:inputType="text"
+        android:maxLength="1"
+        android:digits = "FT"
+        />
+    <EditText
+        style="@style/ItemsStyle"
+        android:id="@+id/second_question"
+        android:ems="10"
+        app:layout_constraintStart_toEndOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/first_question"
+        android:inputType="text"
+        android:maxLength="1"
+        android:digits = "FT"
+        />
+    <EditText
+        style="@style/ItemsStyle"
+        android:id="@+id/third_question"
+        android:ems="10"
+        app:layout_constraintStart_toEndOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/second_question"
+        android:inputType="text"
+        android:maxLength="1"
+        android:digits = "FT"
+        />
+    <EditText
+        style="@style/ItemsStyle"
+        android:id="@+id/fourth_question"
+        android:ems="10"
+        app:layout_constraintStart_toEndOf="@id/second_column_title"
+        app:layout_constraintTop_toBottomOf="@id/third_question"
+        android:inputType="text"
+        android:maxLength="1"
+        android:digits = "FT"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fourth_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50sp"
+        android:text="@string/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
